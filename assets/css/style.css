@@ -11,11 +11,13 @@ body {
 }
 
 a {
-    color: #5d758c;
+    /* color: #5d758c; */
+    color: #87382f;
 }
 
 a:hover {
-    color: #485b6d;
+    /* color: #485b6d; */
+    color: #C45144;
 }
 
 .ns-main-header {
@@ -121,16 +123,8 @@ a .icon-github, a .icon-play-round {
     font-size: 3.3rem;
 }
 
-.ns-projects-separator {
-    width: 20%;
-    margin: 0 auto;
-    border-bottom: 1px dashed #222;
+.icon-github:hover, .icon-play-round:hover {
+    animation: spin 0.33s linear;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-    opacity: 0.8;
-}
-
-[class^="icon-"]:hover, [class*=" icon-"]:hover {
-    opacity: 1;
-}
+@keyframes spin { 100% { -webkit-transform: rotate(720deg); transform:rotate(720deg); } }
