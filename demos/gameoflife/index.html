@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conway's Game of Life</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <style type="text/css" media="screen">
+        body { background-color: #F9F9F9; }
+
+        .main-header h1 {
+            text-align: center;
+        }
+
+        canvas {
+            display: block;
+            /* border: 2px solid black; */
+        }
+
+        .canvas-control {
+            width: 0;
+            margin: 0 auto;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Conway's Game of Life</h1>
+    </header><!-- /main-header -->
+
+    <section class="canvas-control">
+        <canvas id="main-canvas">
+            Sorry, your browser doesn't support <pre>canvas</pre>. Please update it.
+        </canvas>
+
+        <section class="controls">
+            <button class="button toggle play">
+                Play
+            </button>
+
+            <button class="button clear">
+                clear
+            </button>
+
+            <button class="button toggle contrast">
+                Change Contrast
+            </button>
+        </section> <!-- /controls -->
+    </section> <!-- /canvas-control -->
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="GoL.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Grid.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8" async defer>
+    (function() {
+        let canvasControl = document.getElementsByClassName('canvas-control')[0];
+        canvasControl.style.minWidth = canvas.width + 'px';
+
+        let togglePause = document.getElementsByClassName('button toggle play')[0];
+
+        togglePause.addEventListener('click', function() {
+            this.innerHTML = isPaused ? 'Pause' : 'Play';
+            isPaused = !isPaused;
+        });
+
+        let toggleContrast = document.getElementsByClassName('button toggle contrast')[0];
+
+        toggleContrast.addEventListener('click', function() {
+            // Swap canvas background color with its foreground grid color
+            let temp = backgroundColor;
+            backgroundColor = foregroundColor;
+            foregroundColor = temp;
+        });
+
+        let clearButton = document.getElementsByClassName('button clear')[0];
+
+        clearButton.addEventListener('click', function() {
+            isPaused = true;
+            togglePause.innerHTML = 'Play';
+            grid = initGrid(grid_size);
+        });
+    }());
+    </script>
+</body>
+</html>
