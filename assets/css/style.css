@@ -73,6 +73,7 @@ a:hover {
 .ns-info-social-icons .icon-github {
     font-size: 125%;
     margin-right: 0.5rem;
+    opacity: 1;
 }
 
 a .icon-twitter {
@@ -124,4 +125,12 @@ a .icon-github, a .icon-play-round {
     width: 20%;
     margin: 0 auto;
     border-bottom: 1px dashed #222;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    opacity: 0.8;
+}
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+    opacity: 1;
 }
