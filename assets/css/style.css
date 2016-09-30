@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "AdamCGPro";
+    src: url("../fonts/ADAMCGPRO.otf");
+}
+
+body {
+    background-color: #F9F9F9;
+    font-weight: 300;
+    color: #757575;
+    font-size: 1.8rem;
+}
+
+a {
+    color: #5d758c;
+}
+
+a:hover {
+    color: #485b6d;
+}
+
+.ns-main-header {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.ns-name h1 {
+    font-family: AdamCGPro, sans-serif;
+    font-size: 7rem;
+    font-weight: 900;
+
+    /* non-orange yellow  */
+    /* color: #D6880B; */
+    /* milano-red!!!??? */
+    /* color: #B53930; */
+    color: #87382f;
+
+}
+
+.ns-photo img {
+    max-width: 15rem;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem 0.2rem #9E9E9E;
+}
+
+.ns-photo {
+    padding: 0.5rem;
+    text-align: right;
+}
+
+.ns-info {
+    font-size: 1.5rem;
+}
+
+.ns-info p {
+    margin: 0;
+    text-align: right;
+}
+
+.ns-info-job-title {
+    font-weight: 500;
+}
+
+.ns-info-languages, .ns-info-social-icons {
+    font-weight: 300;
+}
+
+.ns-info-social-icons {
+    margin-top: 0.5rem;
+}
+
+.ns-info-social-icons .icon-twitter,
+.ns-info-social-icons .icon-github {
+    font-size: 125%;
+    margin-right: 0.5rem;
+}
+
+a .icon-twitter {
+    color: #1DA1F2;
+}
+
+a .icon-github, a .icon-play-round {
+    color: #222;
+}
+
+.ns-info-social-icons a {
+    text-decoration: none;
+}
+
+.ns-projects-section {}
+.ns-projects-section .container {}
+.ns-project-description {
+
+}
+
+.ns-project {
+    margin-bottom: 2.5rem;
+}
+
+.ns-project-title {
+    border-bottom: 0.4rem solid #5d758c;
+    margin-bottom: 2.5rem;
+}
+
+.ns-project-title h3 {
+    margin-bottom: 0.5rem;
+    color: #222;
+    letter-spacing: 0.02rem;
+}
+
+.ns-project-title h3 a {
+    text-decoration: none;
+}
+
+.ns-project-gh-icon-col {
+    text-align: right;
+}
+
+.ns-project-gh-icon {
+    font-size: 3.3rem;
+}
+
+.ns-projects-separator {
+    width: 20%;
+    margin: 0 auto;
+    border-bottom: 1px dashed #222;
+}
